@@ -1,0 +1,120 @@
+{
+  "revision_id": "9541c33a625f75b02cf56b7d40959444e2f500bc4bab7ca8c263bde164b207e7",
+  "name": "my-datadog",
+  "run_list": [
+    "recipe[datadog::dd-handler]",
+    "recipe[datadog::tomcat]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "apt": {
+      "version": "7.2.0",
+      "identifier": "42f46ee8ced265bcc92c3bf40c9f7ceb3c443df1",
+      "dotted_decimal_identifier": "18846105652351589.53138487443197087.137349770264049",
+      "cache_key": "apt-7.2.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.2.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/apt/versions/7.2.0/download",
+        "version": "7.2.0"
+      }
+    },
+    "chef_handler": {
+      "version": "3.0.3",
+      "identifier": "4d1b0688e8699097d2e921a3271b2667dc8ffcde",
+      "dotted_decimal_identifier": "21703288087406992.42734620216862491.42227523910878",
+      "cache_key": "chef_handler-3.0.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/3.0.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/3.0.3/download",
+        "version": "3.0.3"
+      }
+    },
+    "datadog": {
+      "version": "3.2.0",
+      "identifier": "80b255184916b94d72da32b0fa45d94295e8eccc",
+      "dotted_decimal_identifier": "36224875568371385.21799854685616709.238880006139084",
+      "cache_key": "datadog-3.2.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/datadog/versions/3.2.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/datadog/versions/3.2.0/download",
+        "version": "3.2.0"
+      }
+    },
+    "yum": {
+      "version": "5.1.0",
+      "identifier": "705aaff4ddd04afff64efc8c738cfea4fd628e82",
+      "dotted_decimal_identifier": "31624909165547594.72046938166162316.279984579186306",
+      "cache_key": "yum-5.1.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/5.1.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/yum/versions/5.1.0/download",
+        "version": "5.1.0"
+      }
+    }
+  },
+  "default_attributes": {
+    "datadog": {
+      "api_key": "d4d7a8c885c4d0c04bec60dcab8b692c",
+      "application_key": "e6993e99f32852859d1ab041863822df824b4303",
+      "tomcat": {
+        "instances": [
+          {
+            "server": "localhost",
+            "port": "9000",
+            "name": "national-parks"
+          }
+        ]
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "apt",
+        "= 7.2.0"
+      ],
+      [
+        "chef_handler",
+        "= 3.0.3"
+      ],
+      [
+        "datadog",
+        "= 3.2.0"
+      ],
+      [
+        "yum",
+        "= 5.1.0"
+      ]
+    ],
+    "dependencies": {
+      "apt (7.2.0)": [
+
+      ],
+      "chef_handler (3.0.3)": [
+
+      ],
+      "datadog (3.2.0)": [
+        [
+          "apt",
+          ">= 0.0.0"
+        ],
+        [
+          "yum",
+          ">= 3.0.0"
+        ],
+        [
+          "chef_handler",
+          ">= 1.2.0"
+        ]
+      ],
+      "yum (5.1.0)": [
+
+      ]
+    }
+  }
+}
