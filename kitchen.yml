@@ -12,8 +12,8 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  # - name: bento/centos-7
+  #- name: ubuntu-16.04
+   - name: bento/centos-7
 
 lifecycle:
   pre_create:

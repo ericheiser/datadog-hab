@@ -1,1 +1,0 @@
-{"virtualbox":{"/tmp/results":{"guestpath":"/tmp/results","hostpath":"/Users/ericheiser/projects/webinars/datadog/datadog-hab/results","disabled":false,"__vagrantfile":true},"/tmp/omnibus/cache":{"create":true,"guestpath":"/tmp/omnibus/cache","hostpath":"/Users/ericheiser/.kitchen/cache","disabled":false,"__vagrantfile":true}}}
