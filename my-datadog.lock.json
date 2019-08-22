@@ -1,7 +1,8 @@
 {
-  "revision_id": "9541c33a625f75b02cf56b7d40959444e2f500bc4bab7ca8c263bde164b207e7",
+  "revision_id": "1647f2663064a890fa19772d9496ae966698f8b2a4d7dcd615f9701d67e31f50",
   "name": "my-datadog",
   "run_list": [
+    "recipe[java::default]",
     "recipe[datadog::dd-handler]",
     "recipe[datadog::tomcat]"
   ],
@@ -40,6 +41,39 @@
       "source_options": {
         "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/datadog/versions/3.2.0/download",
         "version": "3.2.0"
+      }
+    },
+    "homebrew": {
+      "version": "5.0.8",
+      "identifier": "072611ae06a863c842644c85bf776ffe18f59b0a",
+      "dotted_decimal_identifier": "2012182212946019.56367993890127735.123137131125514",
+      "cache_key": "homebrew-5.0.8-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/homebrew/versions/5.0.8/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/homebrew/versions/5.0.8/download",
+        "version": "5.0.8"
+      }
+    },
+    "java": {
+      "version": "4.3.0",
+      "identifier": "654c6e9afe85561edf1b79facd55816f552176f7",
+      "dotted_decimal_identifier": "28513010578261334.8689558404910421.142315169609463",
+      "cache_key": "java-4.3.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/java/versions/4.3.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/java/versions/4.3.0/download",
+        "version": "4.3.0"
+      }
+    },
+    "windows": {
+      "version": "6.0.0",
+      "identifier": "afff0357b4898d5fb194d40ead730018569f7a9d",
+      "dotted_decimal_identifier": "49538510745799053.26935375558520179.104532507293",
+      "cache_key": "windows-6.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/6.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/windows/versions/6.0.0/download",
+        "version": "6.0.0"
       }
     },
     "yum": {
@@ -87,6 +121,18 @@
         "= 3.2.0"
       ],
       [
+        "homebrew",
+        "= 5.0.8"
+      ],
+      [
+        "java",
+        "= 4.3.0"
+      ],
+      [
+        "windows",
+        "= 6.0.0"
+      ],
+      [
         "yum",
         "= 5.1.0"
       ]
@@ -111,6 +157,22 @@
           "chef_handler",
           ">= 1.2.0"
         ]
+      ],
+      "homebrew (5.0.8)": [
+
+      ],
+      "java (4.3.0)": [
+        [
+          "homebrew",
+          ">= 0.0.0"
+        ],
+        [
+          "windows",
+          ">= 0.0.0"
+        ]
+      ],
+      "windows (6.0.0)": [
+
       ],
       "yum (5.1.0)": [
 

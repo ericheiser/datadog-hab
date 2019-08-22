@@ -30,6 +30,7 @@ default['datadog']['tomcat']['instances'] = [
 
 # # run_list: run these recipes in the order specified.
 run_list [
+  "java::default",
   "datadog::dd-handler",
   "datadog::tomcat"
 ]
